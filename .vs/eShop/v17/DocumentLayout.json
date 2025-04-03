@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\devaulas\\eShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A80B8099-249B-44C4-A9EE-6CF33AA327C8}|Application\\Application.csproj|c:\\devaulas\\eshop\\application\\produtos\\queries\\obterprodutoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A80B8099-249B-44C4-A9EE-6CF33AA327C8}|Application\\Application.csproj|solutionrelative:application\\produtos\\queries\\obterprodutoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ObterProdutoQuery.cs",
+              "DocumentMoniker": "C:\\devaulas\\eShop\\Application\\Produtos\\Queries\\ObterProdutoQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Produtos\\Queries\\ObterProdutoQuery.cs",
+              "ToolTip": "C:\\devaulas\\eShop\\Application\\Produtos\\Queries\\ObterProdutoQuery.cs",
+              "RelativeToolTip": "Application\\Produtos\\Queries\\ObterProdutoQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T00:30:45.099Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
