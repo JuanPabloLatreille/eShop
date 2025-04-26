@@ -1,9 +1,10 @@
+using Domain.Commons;
 using Domain.Pedidos;
 using MediatR;
 
 namespace Application.Pedidos.Commands;
 
-public class CriarPedidoCommand : IRequest<Pedido>
+public class CriarPedidoCommand : IRequest<Result<Pedido>>
 {
     public required Guid ClienteId { get; set; }
 

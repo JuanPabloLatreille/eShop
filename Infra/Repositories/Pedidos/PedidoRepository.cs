@@ -1,4 +1,5 @@
 using Application.Interfaces.Pedidos;
+using Domain.Commons;
 using Domain.Pedidos;
 using Infra.ApplicationContext;
 using Microsoft.EntityFrameworkCore;
@@ -41,19 +42,18 @@ public class PedidoRepository : IPedidoRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task FecharPedidoAsync(Guid pedidoId)
+    public async Task<Result> FecharPedidoAsync(Pedido pedido)
     {
-        var pedido = await _context.Pedidos
-            .FirstOrDefaultAsync(p => p.Id == pedidoId);
+        var pedidoresult = Pedido.FecharPedido(pedido);
 
-        if (pedido == null)
+        if (!pedidoresult.Success)
         {
-            throw new Exception("Pedido não encontrado.");
+            return Result.Fail(pedidoresult.Message);
         }
-
-        pedido.FecharPedido(pedidoId);
 
         _context.Pedidos.Update(pedido);
         await _context.SaveChangesAsync();
+        
+        return Result.Ok();
     }
 }

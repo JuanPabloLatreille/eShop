@@ -1,10 +1,11 @@
+using Api.Filters;
 using Infra.ApplicationContext;
 using Infra.InjecaoDependecia;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api;
 
-public class Program
+public abstract class Program
 {
     public static void Main(string[] args)
     {
@@ -18,6 +19,11 @@ public class Program
 
         builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        
+        builder.Services.AddControllers(options =>
+        {
+            options.Filters.Add<GlobalExceptionFilter>();
+        });
 
         var app = builder.Build();
 

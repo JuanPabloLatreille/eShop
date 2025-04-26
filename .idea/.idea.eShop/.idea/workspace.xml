@@ -9,7 +9,79 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae213b8f-0a52-4ca5-9053-3bd0948664b0" name="Changes" comment="" />
+    <list default="true" id="ae213b8f-0a52-4ca5-9053-3bd0948664b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Api/Filters/GlobalExceptionFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Pedidos/Commands/FecharPedidoCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Pedidos/Handlers/Commands/FecharPedidoCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Commons/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eShop/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eShop/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.eShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.eShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Controllers/Pedidos/PedidoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Controllers/Pedidos/PedidoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Infra.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Infra.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Infra.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Infra.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/ref/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/ref/Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/refint/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/refint/Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Interfaces/Pedidos/IPedidoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/Pedidos/IPedidoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/ItensPedidos/Handlers/Commands/AddItemPedidoCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/ItensPedidos/Handlers/Commands/AddItemPedidoCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Pedidos/Commands/CriarPedidoCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Pedidos/Commands/CriarPedidoCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Pedidos/Handlers/Commands/CriarPedidoCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Pedidos/Handlers/Commands/CriarPedidoCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Application/bin/Debug/net8.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/ref/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/ref/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/obj/Debug/net8.0/refint/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Application/obj/Debug/net8.0/refint/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Pedidos/Pedido.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Pedidos/Pedido.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/net8.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/net8.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/net8.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/net8.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/ref/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/ref/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/refint/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net8.0/refint/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/Repositories/Pedidos/PedidoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/Repositories/Pedidos/PedidoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Infra.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Infra.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Infra.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/bin/Debug/net8.0/Infra.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/Infra.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/ref/Infra.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/ref/Infra.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/refint/Infra.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infra/obj/Debug/net8.0/refint/Infra.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eShop.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/eShop.sln.DotSettings.user" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +90,38 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JuanPabloLatreille&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:JuanPabloLatreille/eShop.git&quot;,
+    &quot;accountId&quot;: &quot;213dbb82-2a6a-489d-9d3f-d24917c7efcb&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$APPLICATION_HOME_DIR$/lib/modules/intellij.rider.jar!/schemas/msbuild/Microsoft.Build.Core.xsd" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4a28847852ee9ba45fd3107526c0a749a733bd4f4ebf33aa3c9a59737a3f758/EntityFrameworkServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63e63f0c16b0447c8b27e3edb5a892ea1de930/c0/107051bc/ControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Api/Controllers/Pedidos/PedidoController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Application/Interfaces/Pedidos/IPedidoRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Application/ItensPedidos/Handlers/Commands/AddItemPedidoCommandHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Application/Pedidos/Commands/CriarPedidoCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Application/Pedidos/Handlers/Commands/CriarPedidoCommandHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Domain/Pedidos/Pedido.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Infra/Repositories/Pedidos/PedidoRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/devaulas/eShop/Infra/obj/Debug/net8.0/Infra.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -35,6 +134,8 @@
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.Api: IIS Express.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -112,33 +213,51 @@
       <workItem from="1743637765963" duration="430000" />
       <workItem from="1743638211599" duration="55000" />
       <workItem from="1743639762557" duration="176000" />
-      <workItem from="1743722388567" duration="1199000" />
+      <workItem from="1743722388567" duration="1753000" />
+      <workItem from="1743811528056" duration="222000" />
+      <workItem from="1743980669656" duration="130000" />
+      <workItem from="1743980839142" duration="99000" />
+      <workItem from="1743988496479" duration="437000" />
+      <workItem from="1745455749835" duration="1129000" />
+      <workItem from="1745624851663" duration="231000" />
+      <workItem from="1745625438604" duration="2485000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: master">
+      <option name="closed" value="true" />
+      <created>1743723812468</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743723812468</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: master" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: master" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Application/Pedidos/Handlers/Commands/CriarPedidoCommandHandler.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\devaulas\eShop\Application\Pedidos\Handlers\Commands\CriarPedidoCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="731" />
-            </startOffsets>
-            <endOffsets>
-              <option value="732" />
-            </endOffsets>
-          </properties>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

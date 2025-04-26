@@ -177,3 +177,4 @@ C:\devaulas\eShop\Api\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBu
 C:\devaulas\eShop\Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\devaulas\eShop\Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\devaulas\eShop\Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\devaulas\eShop\Api\obj\Debug\net8.0\Api.sourcelink.json

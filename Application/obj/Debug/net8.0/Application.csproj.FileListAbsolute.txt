@@ -13,3 +13,4 @@ C:\devaulas\eShop\Application\obj\Debug\net8.0\Application.dll
 C:\devaulas\eShop\Application\obj\Debug\net8.0\refint\Application.dll
 C:\devaulas\eShop\Application\obj\Debug\net8.0\Application.pdb
 C:\devaulas\eShop\Application\obj\Debug\net8.0\ref\Application.dll
+C:\devaulas\eShop\Application\obj\Debug\net8.0\Application.sourcelink.json

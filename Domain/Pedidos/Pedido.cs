@@ -1,4 +1,5 @@
-﻿using Domain.Produtos;
+﻿using Domain.Commons;
+using Domain.Produtos;
 
 namespace Domain.Pedidos;
 
@@ -24,25 +25,27 @@ public sealed class Pedido
 
     public ICollection<ItemPedido> Itens => _itens;
 
-    public static Pedido CriarPedido(Guid clienteId, string nome)
+    public static Result<Pedido> CriarPedido(Guid clienteId, string nome)
     {
-        return new Pedido(Guid.NewGuid(), clienteId, nome, true);
+        if (clienteId == Guid.Empty)
+            return Result<Pedido>.BadRequest("O ID do cliente é inválido.");
+            
+        if (string.IsNullOrWhiteSpace(nome))
+            return Result<Pedido>.BadRequest("O nome do pedido é obrigatório.");
+            
+        var pedido = new Pedido(Guid.NewGuid(), clienteId, nome, true);
+        return Result<Pedido>.Created(pedido, "Pedido criado com sucesso.");
     }
 
-    public void AdicionarItem(Produto item, decimal quantidade, decimal valor)
+    public static Result FecharPedido(Pedido pedido)
     {
-        var itemPedido = new ItemPedido(Guid.NewGuid(), Id, item.Id, quantidade, valor);
-
-        _itens.Add(itemPedido);
-    }
-
-    public void FecharPedido(Guid pedidoId)
-    {
-        if (_itens.Count is 0)
-        {
-            throw new Exception("Não é possível fechar um pedido sem produtos.");
-        }
-
-        Aberto = false;
+        if (!pedido.Aberto)
+            return Result.BadRequest("O pedido já está fechado.");
+            
+        if (pedido._itens.Count is 0)
+            return Result.BadRequest("Não é possível fechar um pedido sem produtos.");
+        
+        pedido.Aberto = false;
+        return Result.Ok("Pedido fechado com sucesso.");
     }
 }

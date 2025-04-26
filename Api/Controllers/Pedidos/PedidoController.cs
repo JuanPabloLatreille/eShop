@@ -1,5 +1,6 @@
 using Application.Pedidos.Commands;
 using Application.Pedidos.Queries;
+using Domain.Commons;
 using Domain.Pedidos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -32,13 +33,21 @@ public class PedidoController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Pedido>> PostTaskAsync([FromBody] CriarPedidoCommand command)
     {
+        var result = await _mediator.Send(command);
+
+        return StatusCode((int)result.StatusCode, result);
+    }
+
+    [HttpPut]
+    public async Task<ActionResult<Result>> PutTaskAsync([FromBody] FecharPedidoCommand command)
+    {
         if (command == null)
         {
             return BadRequest("Comando inválido");
         }
-
-        var pedido = await _mediator.Send(command);
-        return Ok(pedido);
+        
+        await _mediator.Send(command);
+        return Ok();
     }
 
     [HttpDelete]

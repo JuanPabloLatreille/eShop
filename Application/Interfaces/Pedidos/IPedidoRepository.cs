@@ -1,3 +1,4 @@
+using Domain.Commons;
 using Domain.Pedidos;
 
 namespace Application.Interfaces.Pedidos;
@@ -12,5 +13,5 @@ public interface IPedidoRepository
 
     Task DeletarPedidoAsync(Pedido pedido);
 
-    Task FecharPedidoAsync(Guid pedidoId);
+    Task<Result> FecharPedidoAsync(Pedido pedido);
 }

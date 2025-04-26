@@ -17,3 +17,4 @@ C:\devaulas\eShop\Infra\obj\Debug\net8.0\refint\Infra.dll
 C:\devaulas\eShop\Infra\obj\Debug\net8.0\Infra.pdb
 C:\devaulas\eShop\Infra\obj\Debug\net8.0\Infra.genruntimeconfig.cache
 C:\devaulas\eShop\Infra\obj\Debug\net8.0\ref\Infra.dll
+C:\devaulas\eShop\Infra\obj\Debug\net8.0\Infra.sourcelink.json
