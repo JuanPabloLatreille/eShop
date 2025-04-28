@@ -1,4 +1,6 @@
-﻿namespace Domain.Produtos;
+﻿using Domain.Commons;
+
+namespace Domain.Produtos;
 
 public sealed class Produto
 {
@@ -21,8 +23,28 @@ public sealed class Produto
 
     public decimal Quantidade { get; private set; }
 
-    public static Produto CriarProduto(string nome, string descricao, decimal valorUnitario, decimal quantidade)
+    public static Result<Produto> CriarProduto(string nome, string descricao, decimal valorUnitario, decimal quantidade)
     {
-        return new Produto(Guid.NewGuid(), nome, descricao, valorUnitario, quantidade);
+        if (string.IsNullOrEmpty(nome))
+        {
+            return Result<Produto>.BadRequest("Nome é obrigatório.");
+        }
+
+        if (string.IsNullOrEmpty(descricao))
+        {
+            return Result<Produto>.BadRequest("Descrição é obrigatório.");
+        }
+
+        if (valorUnitario < 0)
+        {
+            return Result<Produto>.BadRequest("Valor inválido.");
+        }
+
+        if (quantidade < 0)
+        {
+            return Result<Produto>.BadRequest("Quantidade inválida.");
+        }
+
+        return Result<Produto>.Created(new Produto(Guid.NewGuid(), nome, descricao, valorUnitario, quantidade));
     }
 }

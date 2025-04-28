@@ -19,19 +19,19 @@ public class PedidoController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Pedido>>> GetTaskAsync()
+    public async Task<ActionResult<Result<List<Pedido>>>> GetTaskAsync()
     {
         return await _mediator.Send(new ObterPedidosQuery());
     }
 
     [HttpGet("Id")]
-    public async Task<ActionResult<Pedido>> GetTaskAsync([FromQuery] ObterPedidoQuery query)
+    public async Task<ActionResult<Result<Pedido>>> GetTaskAsync([FromQuery] ObterPedidoQuery query)
     {
         return await _mediator.Send(query);
     }
 
     [HttpPost]
-    public async Task<ActionResult<Pedido>> PostTaskAsync([FromBody] CriarPedidoCommand command)
+    public async Task<ActionResult<Result<Pedido>>> PostTaskAsync([FromBody] CriarPedidoCommand command)
     {
         var result = await _mediator.Send(command);
 
@@ -51,7 +51,7 @@ public class PedidoController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult> DeleteTaskAsync([FromBody] DeletarPedidoCommand command)
+    public async Task<ActionResult<Result>> DeleteTaskAsync([FromBody] DeletarPedidoCommand command)
     {
         if (command == null)
         {

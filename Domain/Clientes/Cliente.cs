@@ -1,4 +1,6 @@
-﻿namespace Domain.Clientes;
+﻿using Domain.Commons;
+
+namespace Domain.Clientes;
 
 public sealed class Cliente
 {
@@ -18,8 +20,18 @@ public sealed class Cliente
 
     public DateTime DataCriacao { get; private set; }
 
-    public static Cliente CriarCliente(string nome, string email)
+    public static Result<Cliente> CriarCliente(string nome, string email)
     {
-        return new Cliente(Guid.NewGuid(), nome, email, DateTime.UtcNow);
+        if (string.IsNullOrEmpty(nome))
+        {
+            return Result<Cliente>.Fail("Nome do cliente é obrigatório.");
+        }
+
+        if (string.IsNullOrEmpty(email))
+        {
+            return Result<Cliente>.Fail("Email é obrigatório.");
+        }
+
+        return Result<Cliente>.Created(new Cliente(Guid.NewGuid(), nome, email, DateTime.UtcNow));
     }
 }

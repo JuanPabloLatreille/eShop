@@ -1,6 +1,7 @@
 using Application.Clientes.Commands;
 using Application.Clientes.Queries;
 using Domain.Clientes;
+using Domain.Commons;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,19 +19,19 @@ public class ClienteController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Cliente>>> GetTaskAsync()
+    public async Task<ActionResult<Result<List<Cliente>>>> GetTaskAsync()
     {
         return await _mediator.Send(new ObterClientesQuery());
     }
 
     [HttpGet("Id")]
-    public async Task<ActionResult<Cliente>> GetTaskAsync([FromQuery] ObterClienteQuery query)
+    public async Task<ActionResult<Result<Cliente>>> GetTaskAsync([FromQuery] ObterClienteQuery query)
     {
         return await _mediator.Send(query);
     }
 
     [HttpPost]
-    public async Task<ActionResult<Cliente>> PostTaskAsync([FromBody] CriarClienteCommand command)
+    public async Task<ActionResult<Result<Cliente>>> PostTaskAsync([FromBody] CriarClienteCommand command)
     {
         if (command == null)
         {
@@ -42,15 +43,13 @@ public class ClienteController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult> DeleteTaskAsync([FromBody] DeletarClienteCommand command)
+    public async Task<ActionResult<Result>> DeleteTaskAsync([FromBody] DeletarClienteCommand command)
     {
         if (command == null)
         {
             return BadRequest("Comando inválido");
         }
 
-        await _mediator.Send(command);
-
-        return Ok();
+        return await _mediator.Send(command);
     }
 }

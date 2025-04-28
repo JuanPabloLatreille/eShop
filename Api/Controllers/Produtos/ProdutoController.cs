@@ -1,5 +1,6 @@
 using Application.Produtos.Commands;
 using Application.Produtos.Queries;
+using Domain.Commons;
 using Domain.Produtos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -18,19 +19,19 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Produto>>> GetTaskAsync()
+    public async Task<ActionResult<Result<List<Produto>>>> GetTaskAsync()
     {
         return await _mediator.Send(new ObterProdutosQuery());
     }
 
     [HttpGet("Id")]
-    public async Task<ActionResult<Produto>> GetTaskAsync([FromQuery] ObterProdutoQuery query)
+    public async Task<ActionResult<Result<Produto>>> GetTaskAsync([FromQuery] ObterProdutoQuery query)
     {
         return await _mediator.Send(query);
     }
 
     [HttpPost]
-    public async Task<ActionResult<Produto>> PostTaskAsync([FromBody] CriarProdutoCommand command)
+    public async Task<ActionResult<Result<Produto>>> PostTaskAsync([FromBody] CriarProdutoCommand command)
     {
         if (command == null)
         {
@@ -42,7 +43,7 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult> DeleteTaskAsync([FromBody] DeletarProdutoCommand command)
+    public async Task<ActionResult<Result>> DeleteTaskAsync([FromBody] DeletarProdutoCommand command)
     {
         if (command == null)
         {

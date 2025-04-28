@@ -3,7 +3,6 @@ using Application.Interfaces.Clientes;
 using Application.Interfaces.ItensPedidos;
 using Application.Interfaces.Pedidos;
 using Application.Interfaces.Produtos;
-using Application.Pedidos.Handlers.Queries;
 using Infra.Repositories.Clientes;
 using Infra.Repositories.ItensPedidos;
 using Infra.Repositories.Pedidos;
