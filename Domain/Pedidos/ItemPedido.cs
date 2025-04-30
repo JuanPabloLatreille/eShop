@@ -1,3 +1,5 @@
+using Domain.Commons;
+
 namespace Domain.Pedidos;
 
 public sealed class ItemPedido
@@ -21,8 +23,8 @@ public sealed class ItemPedido
     
     public decimal Valor { get; private set; }
 
-    public static ItemPedido Criar(Guid pedidoId, Guid produtoId, decimal quantidade, decimal valor)
+    public static Result<ItemPedido> Criar(Guid pedidoId, Guid produtoId, decimal quantidade, decimal valor)
     {
-        return new ItemPedido(Guid.NewGuid(), pedidoId, produtoId, quantidade, valor);
+        return Result<ItemPedido>.Ok(new ItemPedido(Guid.NewGuid(), pedidoId, produtoId, quantidade, valor));
     }
 }

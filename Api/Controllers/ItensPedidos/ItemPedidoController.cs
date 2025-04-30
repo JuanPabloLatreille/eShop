@@ -1,5 +1,6 @@
 using Application.ItensPedidos.Commands;
 using Application.ItensPedidos.Queries;
+using Domain.Commons;
 using Domain.Pedidos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -18,23 +19,21 @@ public class ItemPedidoController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<ItemPedido>>> GetTaskAsync()
+    public async Task<ActionResult<Result<List<ItemPedido>>>> GetTaskAsync()
     {
         return await _mediator.Send(new ObterItensPedidosQuery());
     }
 
     [HttpGet("Id")]
-    public async Task<ActionResult<ItemPedido>> GetTaskAsync([FromQuery] ObterItemPedidoQuery query)
+    public async Task<ActionResult<Result<ItemPedido>>> GetTaskAsync([FromQuery] ObterItemPedidoQuery query)
     {
         var item = await _mediator.Send(query);
-        if (item == null)
-            return NotFound("Item do pedido não encontrado.");
 
         return Ok(item);
     }
 
     [HttpPost]
-    public async Task<ActionResult<ItemPedido>> PostTaskAsync([FromBody] AddItemPedidoCommand command)
+    public async Task<ActionResult<Result<ItemPedido>>> PostTaskAsync([FromBody] AddItemPedidoCommand command)
     {
         if (command == null)
             return BadRequest("Comando inválido");

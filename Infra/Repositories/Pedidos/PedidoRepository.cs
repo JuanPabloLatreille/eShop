@@ -28,6 +28,11 @@ public class PedidoRepository : IPedidoRepository
         return await _context.Pedidos.Include(p => p.Itens).FirstOrDefaultAsync(p => p.Id == id);
     }
 
+    public async Task<Pedido?> ObterPedidoClienteIdAsync(Guid id)
+    {
+        return await _context.Pedidos.Where(x => x.Aberto).FirstOrDefaultAsync(p => p.ClienteId == id);
+    }
+
     public async Task<Pedido> AdicionarPedidoAsync(Pedido pedido)
     {
         await _context.Pedidos.AddAsync(pedido);

@@ -8,6 +8,8 @@ public interface IPedidoRepository
     Task<List<Pedido>> ObterPedidosAsync();
 
     Task<Pedido?> ObterPedidoIdAsync(Guid id);
+    
+    Task<Pedido?> ObterPedidoClienteIdAsync(Guid id);
 
     Task<Pedido> AdicionarPedidoAsync(Pedido pedido);
 

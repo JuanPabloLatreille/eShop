@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces.Clientes;
+using Application.Interfaces.Pedidos;
 using Domain.Commons;
 using MediatR;
 
@@ -12,10 +13,14 @@ public class DeletarClienteCommand : IRequest<Result>
 public class DeletarClienteCommandHandler : IRequestHandler<DeletarClienteCommand, Result>
 {
     private readonly IClienteRepository _clienteRepository;
+    private readonly IPedidoRepository _pedidoRepository;
 
-    public DeletarClienteCommandHandler(IClienteRepository clienteRepository)
+    public DeletarClienteCommandHandler(
+        IClienteRepository clienteRepository,
+        IPedidoRepository pedidoRepository)
     {
         _clienteRepository = clienteRepository;
+        _pedidoRepository = pedidoRepository;
     }
 
     public async Task<Result> Handle(DeletarClienteCommand request, CancellationToken cancellationToken)
@@ -25,6 +30,13 @@ public class DeletarClienteCommandHandler : IRequestHandler<DeletarClienteComman
         if (cliente is null)
         {
             return Result.NotFound("Cliente não encontrado.");
+        }
+        
+        var clientePossuiPedidoAberto = await _pedidoRepository.ObterPedidoClienteIdAsync(cliente.Id);
+
+        if (clientePossuiPedidoAberto is not null)
+        {
+            return Result.Unauthorized("Não é possível deletar o cliente. Pois, possui pedidos em aberto.");
         }
 
         await _clienteRepository.DeletarClienteAsync(cliente);
