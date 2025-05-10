@@ -18,9 +18,10 @@ public sealed class Autenticacao
 
     public DateTime DataCriacao { get; private set; }
 
-    public static Result<Autenticacao> Criar(Guid id, Guid usuarioId, string token)
+    public static Result<Autenticacao> Criar(Guid usuarioId, string token)
     {
         var dataCriacao = DateTime.UtcNow - TimeSpan.FromHours(3);
+        var id = Guid.NewGuid();
         
         return Result<Autenticacao>.Created(new Autenticacao(id, usuarioId, token, dataCriacao));
     }

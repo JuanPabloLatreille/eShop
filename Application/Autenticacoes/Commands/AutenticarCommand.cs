@@ -41,6 +41,6 @@ public class AutenticarCommandHandler : IRequestHandler<AutenticarCommand, Resul
 
         var token = _tokenService.GerarToken(usuario);
 
-        return Autenticacao.Criar(Guid.NewGuid(), usuario.Id, token);
+        return Autenticacao.Criar(usuario.Id, token);
     }
 }
