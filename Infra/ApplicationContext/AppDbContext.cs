@@ -1,6 +1,8 @@
 using Domain.Clientes;
+using Domain.Commons;
 using Domain.Pedidos;
 using Domain.Produtos;
+using Domain.Usuarios;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infra.ApplicationContext;
@@ -18,6 +20,10 @@ public class AppDbContext : DbContext
     public DbSet<Produto> Produtos { get; set; }
 
     public DbSet<ItemPedido> ItemPedidos { get; set; }
+    
+    public DbSet<Usuario> Usuarios { get; set; }
+    
+    public DbSet<Autenticacao> Autenticacoes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

@@ -1,12 +1,31 @@
+using Application.Usuarios.Commands;
+using Domain.Commons;
+using Domain.Usuarios;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers.Usuarios;
 
-public class UsuarioController : Controller
+[Route("api/[controller]")]
+[ApiController]
+public class UsuarioController : ControllerBase
 {
-    // GET
-    public IActionResult Index()
+    private readonly IMediator _mediator;
+
+    public UsuarioController(IMediator mediator)
     {
-        return View();
+        _mediator = mediator;
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<Result<Usuario>>> PostTaskAsync([FromBody] CriarUsuarioCommand command)
+    {
+        if (command == null)
+        {
+            return BadRequest("Comando inválido");
+        }
+
+        var usuario = await _mediator.Send(command);
+        return Ok(usuario);
     }
 }

@@ -1,5 +1,6 @@
 using Api.Filters;
 using Infra.ApplicationContext;
+using Infra.Commons;
 using Infra.InjecaoDependecia;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +25,9 @@ public abstract class Program
         {
             options.Filters.Add<GlobalExceptionFilter>();
         });
+        
+        builder.Services.Configure<JwtSettings>(
+            builder.Configuration.GetSection("JwtSettings"));
 
         var app = builder.Build();
 

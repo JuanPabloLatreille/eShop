@@ -1,6 +1,6 @@
 using Domain.Usuarios;
 
-namespace Infra.Services.Interfaces;
+namespace Application.Interfaces.TokenService;
 
 public interface ITokenService
 {
