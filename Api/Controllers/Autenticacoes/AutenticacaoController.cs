@@ -17,14 +17,14 @@ public class AutenticacaoController : ControllerBase
     }
     
     [HttpPost]
-    public async Task<ActionResult<Result<string>>> PostTaskAsync([FromBody] AutenticarCommand command)
+    public async Task<ActionResult<Result<Autenticacao>>> PostTaskAsync([FromBody] AutenticarCommand command)
     {
         if (command == null)
         {
             return BadRequest("Comando inválido");
         }
 
-        var token = await _mediator.Send(command);
-        return Ok(token);
+        var result = await _mediator.Send(command);
+        return Ok(result);
     }
 }

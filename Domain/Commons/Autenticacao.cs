@@ -1,8 +1,8 @@
 namespace Domain.Commons;
 
-public class Autenticacao
+public sealed class Autenticacao
 {
-    public Autenticacao(Guid id, Guid usuarioId, string token, DateTime dataCriacao)
+    private Autenticacao(Guid id, Guid usuarioId, string token, DateTime dataCriacao)
     {
         Id = id;
         UsuarioId = usuarioId;
@@ -18,8 +18,10 @@ public class Autenticacao
 
     public DateTime DataCriacao { get; private set; }
 
-    public static Result<Autenticacao> Criar(Guid id, Guid usuarioId, string token, DateTime dataCriacao)
+    public static Result<Autenticacao> Criar(Guid id, Guid usuarioId, string token)
     {
+        var dataCriacao = DateTime.UtcNow - TimeSpan.FromHours(3);
+        
         return Result<Autenticacao>.Created(new Autenticacao(id, usuarioId, token, dataCriacao));
     }
 }

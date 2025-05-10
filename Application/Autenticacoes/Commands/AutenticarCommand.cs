@@ -5,14 +5,14 @@ using MediatR;
 
 namespace Application.Autenticacoes.Commands;
 
-public class AutenticarCommand : IRequest<Result<string>>
+public class AutenticarCommand : IRequest<Result<Autenticacao>>
 {
     public string Usuario { get; set; } = string.Empty;
 
     public string Senha { get; set; } = string.Empty;
 }
 
-public class AutenticarCommandHandler : IRequestHandler<AutenticarCommand, Result<string>>
+public class AutenticarCommandHandler : IRequestHandler<AutenticarCommand, Result<Autenticacao>>
 {
     private readonly IUsuarioRepository _usuarioRepository;
     private readonly ITokenService _tokenService;
@@ -23,24 +23,24 @@ public class AutenticarCommandHandler : IRequestHandler<AutenticarCommand, Resul
         _tokenService = tokenService;
     }
 
-    public async Task<Result<string>> Handle(AutenticarCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Autenticacao>> Handle(AutenticarCommand request, CancellationToken cancellationToken)
     {
         var usuario = await _usuarioRepository.BuscarUsuarioNomeAsync(request.Usuario);
 
         if (usuario is null)
         {
-            return Result<string>.NotFound("Usuário não encontrado.");
+            return Result<Autenticacao>.NotFound("Usuário não encontrado.");
         }
 
-        bool senhaCorreta = BCrypt.Net.BCrypt.Verify(request.Senha, usuario.Senha);
+        var senhaCorreta = BCrypt.Net.BCrypt.Verify(request.Senha, usuario.Senha);
 
         if (!senhaCorreta)
         {
-            return Result<string>.Unauthorized("Credenciais inválidas.");
+            return Result<Autenticacao>.Unauthorized("Credenciais inválidas.");
         }
 
         var token = _tokenService.GerarToken(usuario);
 
-        return Result<string>.Ok(token);
+        return Autenticacao.Criar(Guid.NewGuid(), usuario.Id, token);
     }
 }
